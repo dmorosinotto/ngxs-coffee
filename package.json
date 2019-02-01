@@ -23,11 +23,13 @@
     "@angular/platform-browser-dynamic": "^7.2.0",
     "@angular/router": "^7.2.0",
     "@ngxs-labs/emitter": "^1.8.0",
+    "@ngxs-labs/immer-adapter": "^1.1.2",
     "@ngxs/devtools-plugin": "^3.3.2",
     "@ngxs/logger-plugin": "^3.3.2",
     "@ngxs/schematics": "^0.0.1-alpha.5",
     "@ngxs/store": "^3.3.2",
     "core-js": "^2.6.1",
+    "immer": "^1.12.1",
     "jasmine-marbles": "^0.4.1",
     "rxjs": "^6.3.3",
     "zone.js": "^0.8.26"
