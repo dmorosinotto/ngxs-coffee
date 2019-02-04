@@ -32,7 +32,7 @@ export class CustomizePageComponent implements OnInit, OnDestroy {
     const { template = "" } = this.route.snapshot.queryParams;
 
     this.store
-      .select((x: AppApp & RemixRemix) => ({
+      .select((x: GlobalState) => ({
         //DEFINISCO LO STATO GLOBALE = App=BASE + Remix=FEATURE
         template: x.app.coffeeList.find(c => c.name === template),
         runningNo: x.remix.runningNo

@@ -1,28 +1,29 @@
-import { State, StateContext, Action } from '@ngxs/store';
-import { NextRunningNo } from './remix.actions';
+import { State, StateContext, Action } from "@ngxs/store";
+import { NextRunningNo } from "./remix.actions";
 
-export const getRemixInitialState = (): Remix => ({
+//export const getRemixInitialState = (): RemixModel => ({
+//  runningNo: 1
+//});
+
+@State<RemixModel>({
+  name: "remix",
+  defaults: {
+    //getRemixInitialState()
     runningNo: 1
-});
-
-@State<Remix>({
-    name: 'remix',
-    defaults: {
-        runningNo: 1
-    }
+  }
 })
 export class RemixState {
-    @Action(NextRunningNo)
-    nextRunningNo(ctx: StateContext<Remix>, action: NextRunningNo) {
-        const state = ctx.getState();
+  @Action(NextRunningNo)
+  nextRunningNo(ctx: StateContext<RemixModel>, action: NextRunningNo) {
+    const state = ctx.getState();
 
-        const current = {
-            runningNo: state.runningNo + 1
-        };
+    const current = {
+      runningNo: state.runningNo + 1
+    };
 
-        ctx.setState({
-            ...state,
-            ...current
-        });
-    }
+    ctx.setState({
+      ...state,
+      ...current
+    });
+  }
 }

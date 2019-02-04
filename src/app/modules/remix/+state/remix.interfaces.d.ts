@@ -1,8 +1,9 @@
-interface Remix {
-    // define state here
-    runningNo: number;
+interface RemixModel {
+  // define state here
+  runningNo: number;
 }
 
-interface RemixRemix {
-    readonly remix: Remix;
+//SFRUTTO TS INTERFACE OPEN-ENDED PER AGGIUNGERE remix NEL GlobalState
+interface GlobalState {
+  readonly remix: RemixModel;
 }
