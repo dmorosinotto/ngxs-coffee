@@ -1,6 +1,6 @@
 import { NextRunningNo } from "./remix.actions";
 import { NgxsModule, Store } from "@ngxs/store";
-import { RemixState, getRemixInitialState } from "./remix.state";
+import { RemixState /*, getRemixInitialState*/ } from "./remix.state";
 import { TestBed, async } from "@angular/core/testing";
 import { stateNameErrorMessage } from "@ngxs/store/src/decorators/state";
 
@@ -19,7 +19,7 @@ describe("Remix Reducer", () => {
     it("should increase runnning no", () => {
       // arrange
       const expectedState: RemixModel = {
-        ...getRemixInitialState(),
+        //...getRemixInitialState(),
         runningNo: 5
       };
 
